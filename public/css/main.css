@@ -1,3 +1,7 @@
+.bg-header-footer{
+    background-color: #e8e8ed;
+}
+
 .carousel-item {
     height: 100vh;
     min-height: 350px;
@@ -25,4 +29,30 @@
     width: 100%;
     height: 500px;
     border: 0;
+}
+
+.link-video-category{
+    color: black;
+    text-decoration: none;
+    text-align: center;
+}
+
+.tricky-category-list{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    list-style: none;
+    padding: 0 0 0 30px;
+}
+
+.tricky-category-list-link{
+    padding: 7px 25px 9px 25px;
+    background-color: #2b3595;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 2px;
+}
+
+.tricky-categoty-list-link-active{
+    background-color: #2b3595b0;
 }

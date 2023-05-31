@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="container">
+    <div class="container py-5">
         <h1 class="text-center">{{ $category->title }}</h1>
         <div class="row">
             @foreach ($videos as $video)
@@ -9,7 +9,7 @@
                 <h3>{{ $video->title }}</h3>
                 <div class="video-block" >
                     <iframe class="video" style="width:100%; min-height: 600px"
-                    src="https://www.youtube.com/embed/{{$video->video}}">
+                    src="https://www.youtube.com/embed/{{$video->video}}" allowfullscreen>
                     </iframe>
                 </div>
                 <div class="description-block">

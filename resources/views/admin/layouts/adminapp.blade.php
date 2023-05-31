@@ -60,7 +60,8 @@
     <script type="module" src="/js/material.js"></script>
 
     <!-- tinyMCE -->
-    {{-- <script src="https://cdn.tiny.cloud/1/lr41h997mmdfdxqgb09p501djuahr9yibyhucqh093t1qkjh/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script> --}}
+    <script src="https://cdn.tiny.cloud/1/lr41h997mmdfdxqgb09p501djuahr9yibyhucqh093t1qkjh/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
+
 
     <script src="/js/scripts.js"></script>
     <script src="{{ asset ('js/admin.js') }}"></script>

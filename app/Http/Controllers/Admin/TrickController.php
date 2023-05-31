@@ -4,25 +4,25 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Models\{VideoLecture, VideoLectureCategory};
+use App\Models\{Trick, TrickCategory};
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Str;
 
-class VideoLectureController extends Controller
+class TrickController extends Controller
 {
     public function index()
     {
-        $videos = VideoLecture::get();
+        $tricks = Trick::get();
 
-        return view('admin.videoLecture.index',[
-            'videos' => $videos,
+        return view('admin.trick.index',[
+            'tricks' => $tricks,
         ]);
     }
 
     public function create()
     {
-        $categories = VideoLectureCategory::get(['id', 'title']);
-        return view('admin.videoLecture.create', [
+        $categories = TrickCategory::get(['id', 'title']);
+        return view('admin.trick.create', [
             'categories' => $categories,
         ]);
     }
@@ -31,7 +31,7 @@ class VideoLectureController extends Controller
     {
         $rules = [
             'title' => 'required',
-            'video_lecture_category_id' => 'required',
+            'trick_category_id' => 'required',
             'description' => '',
             'video' => 'required',
             'seo_title' => '',
@@ -41,7 +41,7 @@ class VideoLectureController extends Controller
 
         $message =         [
             'name.required' => 'Напишіть будь ласка назву.',
-            'video_lecture_category_id.required' => 'Оберіть будь ласка категорію',
+            'trick_category_id.required' => 'Оберіть будь ласка категорію',
             'video.required' => 'Запишіть посилання на відео',
             'seo_title.required' => 'Напишіть будь ласка заголовок для SEO .',
             'seo_keywords.required' => 'Напишіть будь ласка ключові слова для SEO.',
@@ -51,31 +51,26 @@ class VideoLectureController extends Controller
         $data = $request->validate($rules, $message, );
         $data['slug'] = Str::slug($data['title']);
 
-        VideoLecture::create($data);
+        Trick::create($data);
 
-        return redirect()->route('admin.videoLecture.index');
+        return redirect()->route('admin.trick.index');
     }
 
-    public function show( )
-    {
-        # code...
-    }
-
-    public function edit(VideoLecture $video)
+    public function edit(trick $trick)
     {
 
-        $categories = VideoLectureCategory::get(['id', 'title']);
-        return view('admin.videoLecture.edit', [
-            'video' => $video,
+        $categories = TrickCategory::get(['id', 'title']);
+        return view('admin.trick.edit', [
+            'trick' => $trick,
             'categories' => $categories,
         ]);
     }
 
-    public function update(Request $request, VideoLecture $video)
+    public function update(Request $request, Trick $trick)
     {
         $rules = [
             'title' => 'required',
-            'video_lecture_category_id' => 'required',
+            'trick_category_id' => 'required',
             'description' => '',
             'video' => 'required',
             'seo_title' => '',
@@ -96,17 +91,17 @@ class VideoLectureController extends Controller
         $data['slug'] = Str::slug($data['title']);
 
         // dd($data);
-        $video->update($data);
+        $trick->update($data);
 
-        return redirect()->route('admin.videoLecture.index');
+        return redirect()->route('admin.trick.index');
     }
 
-    public function delete($videoLecture)
+    public function delete($trick)
     {
-        $video = VideoLecture::findOrFail($videoLecture);
+        $trick = Trick::findOrFail($trick);
 
-		$video->delete();
+		$trick->delete();
 
-        return redirect()->route('admin.videoLecture.index');
+        return redirect()->route('admin.trick.index');
     }
 }

@@ -1,5 +1,5 @@
 <!-- Navigation -->
-<nav class="navbar navbar-expand-lg navbar-light bg-light ">
+<nav class="navbar navbar-expand-lg navbar-light bg-header-footer">
     <div class="container">
       <a class="navbar-brand" href="{{ route('home.index') }}">
         @include('layouts.blocks.logo')
@@ -10,16 +10,16 @@
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ms-auto">
           <li class="nav-item active">
-            <a class="nav-link" href="#">Tricky</a>
+            <a class="nav-link" href="{{ route('trick.index') }}">Triky</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="{{ route('videoLectureCategory.index') }}">Video Lekce</a>
           </li>
-          <li class="nav-item">
+          {{-- <li class="nav-item">
             <a class="nav-link" href="#">Projekty</a>
-          </li>
+          </li> --}}
           <li class="nav-item">
-            <a class="nav-link" href="#">Contact</a>
+            <a class="nav-link" href="{{ route('contact.index') }}">Kontakt</a>
           </li>
         </ul>
       </div>

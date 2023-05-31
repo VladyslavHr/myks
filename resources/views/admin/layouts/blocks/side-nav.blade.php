@@ -168,19 +168,33 @@
                             </nav>
                         </div>
                         <!-- Drawer link (Forms)-->
-                        <a class="nav-link collapsed" href="javascript:void(0);" data-bs-toggle="collapse" data-bs-target="#collapseForms" aria-expanded="false" aria-controls="collapseForms">
+                        <a class="nav-link collapsed" href="javascript:void(0);" data-bs-toggle="collapse" data-bs-target="#collapseTrickCategory" aria-expanded="false" aria-controls="collapseTrickCategory">
                             <div class="nav-link-icon">
-                                {{-- <i class="material-icons">directions_car</i> --}}
-                                <i class="bi bi-boxes"></i>
+                                <i class="material-icons">app_shortcut</i>
+                                {{-- <i class="bi bi-boxes"></i> --}}
                             </div>
-                            Товари
+                            Категорії коротких відео
                             <div class="drawer-collapse-arrow"><i class="material-icons">expand_more</i></div>
                         </a>
                         <!-- Nested drawer nav (Forms)-->
-                        <div class="collapse" id="collapseForms" aria-labelledby="headingOne" data-bs-parent="#drawerAccordion">
+                        <div class="collapse" id="collapseTrickCategory" aria-labelledby="headingOne" data-bs-parent="#drawerAccordion">
                             <nav class="drawer-menu-nested nav">
-                                {{-- <a class="nav-link" href="{{ route('admin.products.index') }}">Список товарів</a>
-                                <a class="nav-link" href="{{ route('admin.products.create') }}">Створити товар</a> --}}
+                                <a class="nav-link" href="{{ route('admin.trickCategory.index') }}">Список категорій</a>
+                                <a class="nav-link" href="{{ route('admin.trickCategory.create') }}">Створити категорію</a>
+                            </nav>
+                        </div>
+                        <a class="nav-link collapsed" href="javascript:void(0);" data-bs-toggle="collapse" data-bs-target="#collapseTrick" aria-expanded="false" aria-controls="collapseTrick">
+                            <div class="nav-link-icon">
+                                <i class="material-icons">app_shortcut</i>
+                            </div>
+                            Короткі відео
+                            <div class="drawer-collapse-arrow"><i class="material-icons">expand_more</i></div>
+                        </a>
+                        <!-- Nested drawer nav (Forms)-->
+                        <div class="collapse" id="collapseTrick" aria-labelledby="headingOne" data-bs-parent="#drawerAccordion">
+                            <nav class="drawer-menu-nested nav">
+                                <a class="nav-link" href="{{ route('admin.trick.index') }}">Список коротких відео</a>
+                                <a class="nav-link" href="{{ route('admin.trick.create') }}">Створити коротке відео</a>
                             </nav>
                         </div>
                         <!-- Drawer link (Utilities)-->
