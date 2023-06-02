@@ -6,10 +6,10 @@
 <div class="main-bg-image"></div>
 
 <div class="container py-5">
+    <h1 class="text-center pb-5">Kontakt</h1>
     <div class="row">
         <div class="col-md-6">
-            <h1>Kontakt</h1>
-            <h2 class="py-3 text-primary">MYKS.CZ</h2>
+            <h2 class="py-3">MYKS.CZ</h2>
             <div class="contac-info">
                 <div class="contact-el">
                     <span>
@@ -91,14 +91,14 @@
     </div>
 </div>
 
-<div class="container-wrap-contact-firma">
-    <div class="container">
+<div class="container-wrap-contact-firma py-5">
+    <div class="container ">
         <div class="row">
             <div class="col-md-6 contact-firma-left">
-                <h2>
+                <h2 class="contact-firma-left-title">
                     Fakturační údaje
                 </h2>
-                <h3>
+                <h3 class="contact-firma-left-title">
                     Myks.cz
                 </h3>
             </div>

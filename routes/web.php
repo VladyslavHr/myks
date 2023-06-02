@@ -16,6 +16,7 @@ use App\Http\Controllers\Admin\TrickCategoryController as TrickCategoryControlle
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::get('/sitemap.xml', [App\Http\Controllers\Controller::class, 'sitemap'])->name('sitemap');
 
 Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home.index');
 

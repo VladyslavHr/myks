@@ -1,5 +1,60 @@
+h1,
+h2,
+h3 {
+    color: #2b3595;
+}
+
+h4,
+h5 {
+    color: #fb7f00!important;
+}
+
+input,
+textarea,
+select {
+    border-color: #c8c9cd!important;
+    border-radius: 2px!important;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    color: #2b3595!important;
+    background-color: var(--bs-form-control-bg);
+    border-color: #2b3595!important;
+    outline: 0;
+    box-shadow: 0 0 0 0.25rem rgb(43,53,149, .25)!important;
+}
+
+.btn-primary{
+    background-color: #2b3595!important;
+    border-color: #2b3595!important;
+    border-radius: 2px!important;
+}
+
+.btn-primary:hover{
+    background-color: #fb7f00!important;
+    border-color: #fb7f00!important;
+    transition: 0.3s!important;
+}
+
+.link-menu{
+    color: #2b3595;
+}
+
+.link-menu:hover{
+    color: #fb7f00;
+    transition: 0.3s;
+}
+
+.active{
+    color: #fb7f00!important;
+}
+
 .bg-header-footer{
-    background-color: #e8e8ed;
+    /* background-color: #e8e8ed; */
+    background-color: #e4e4fd;
+    /* e4e4fd */
 }
 
 .carousel-item {
@@ -54,5 +109,17 @@
 }
 
 .tricky-categoty-list-link-active{
-    background-color: #2b3595b0;
+    background-color: #fb7f00;
+}
+
+.container-wrap-contact-firma{
+    background-color: #2b3595;
+}
+
+.contact-firma-right{
+    color: #fff;
+}
+
+.contact-firma-left-title{
+    color: #fff!important;
 }

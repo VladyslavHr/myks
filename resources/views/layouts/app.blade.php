@@ -7,7 +7,16 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>{{ config('app.name', 'Kurz Excel') }}</title>
+
+
+    <meta name="keywords" content="@yield('keywords')">
+    <meta name="description" content="@yield('description')">
+    <meta name="author" content="Vladyslav Hrebennikov">
+
+    <meta name="robots" content="index, follow">
+
+    <link rel="canonical" href="{{ str_replace('//myks.cz/', '//www.myks.cz/', url()->current()) }}">
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -59,7 +68,7 @@
     {{-- <script src="{{ asset('js/splide.min.js') }}"></script> --}}
     <script src="{{ asset('js/owl.carousel.min.js') }}"></script>
     {{-- <script src="{{ asset('js/toastr.min.js') }}"></script> --}}
-
+    <script src="https://kit.fontawesome.com/01db3a6801.js" crossorigin="anonymous"></script>
     <script src="{{ asset ('js/main.js?v=' . filemtime(public_path('js/main.js')) ) }}"></script>
 
 

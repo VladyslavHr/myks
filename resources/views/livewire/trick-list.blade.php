@@ -35,7 +35,10 @@
     <div class="row align-items-center pb-3 pt-5">
         <div class="col-lg-3">
             <select wire:model="sortingSelectValue" class="form-select sorting-select">
-                <option value="title_asc">Abecedně</option>
+                <option value="title/asc">A-Z</option>
+                <option value="title/desc">Z-A</option>
+                <option value="created_at/asc">Nový</option>
+                <option value="created_at/desc">Starý</option>
             </select>
         </div>
         <div class="col-lg-9">
@@ -46,7 +49,7 @@
     <div class="row">
         @foreach ($tricks as $trick)
         <div class="col-lg-4 py-3">
-            <h4>{{ $trick->title }}</h4>
+            <h4 class="text-center">{{ $trick->title }}</h4>
             <iframe class="video" style="width:100%; min-height: 400px"
             src="https://www.youtube.com/embed/{{$trick->video}}" allowfullscreen>
             </iframe>

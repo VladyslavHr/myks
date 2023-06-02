@@ -3,6 +3,7 @@
 
 @section('content')
     <div class="container py-5">
+        <h1 class="text-center pb-5">Video lekce</h1>
         <div class="row">
             @foreach ($categories as $category)
             @if (count($category->videos))
@@ -28,7 +29,7 @@
                     <p class="">
                         {{ $category->description }}
                     </p>
-                    <a href="{{ route('videoLectureCategory.show', $category->slug) }}" class="button location-link">
+                    <a href="{{ route('videoLectureCategory.show', $category->slug) }}" class="button location-link btn btn-primary">
                         <span>Číst více</span>
                     </a>
                 </div>

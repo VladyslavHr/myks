@@ -22,8 +22,8 @@ class TrickList extends Component
 
     public function updatedSortingSelectValue()
     {
-        $this->sortingBy = explode('_', $this->sortingSelectValue)[0];
-        $this->sortingDirection = explode('_', $this->sortingSelectValue)[1] ?? 'asc';
+        $this->sortingBy = explode('/', $this->sortingSelectValue)[0];
+        $this->sortingDirection = explode('/', $this->sortingSelectValue)[1] ?? 'asc';
         $this->setQueryParams(['sortingBy' => $this->sortingBy, 'sortingDirection' => $this->sortingDirection]);
 
     }
