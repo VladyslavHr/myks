@@ -25,7 +25,7 @@ class Controller extends BaseController
             $content .= '<url>
             <loc>'. route('videoLectureCategory.show', $video->slug) .'</loc>
             <lastmod>'. $video->updated_at->format('Y-m-d') .'</lastmod>
-            <changefreq>monthly</changefreq>
+            <changefreq>daily</changefreq>
             <priority>0.5</priority>
           </url>';
         }

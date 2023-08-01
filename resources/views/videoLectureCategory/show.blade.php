@@ -1,4 +1,7 @@
 @extends('layouts.app')
+@section('title', $category->seo_title)
+@section('description', $category->seo_description)
+@section('keywords', $category->seo_keywords)
 
 @section('content')
     <div class="container py-5">

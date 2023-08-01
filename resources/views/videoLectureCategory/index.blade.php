@@ -1,5 +1,9 @@
 @extends('layouts.app')
 
+@section('title', 'Kurz Úvod do Power BI a Excel,')
+@section('description', 'Kurzy MS Excel - všechny stupně pokročilosti. Naučte se ovládat Power BI desktop.')
+@section('keywords', 'Power BI , Excel, Efektivní analýza dat a reporting (PWBI1), PWBI1, Microsoft Office, Power BI, Kurz, Školení')
+
 
 @section('content')
     <div class="container py-5">

@@ -19,6 +19,7 @@ use App\Http\Controllers\Admin\TrickCategoryController as TrickCategoryControlle
 Route::get('/sitemap.xml', [App\Http\Controllers\Controller::class, 'sitemap'])->name('sitemap');
 
 Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home.index');
+Route::get('o-nas', [App\Http\Controllers\HomeController::class, 'companyInfo'])->name('home.companyInfo');
 
 // Video Lecture
 Route::get('/video-lekce', [App\Http\Controllers\VideoLectureCategoryController::class, 'index'])->name('videoLectureCategory.index');

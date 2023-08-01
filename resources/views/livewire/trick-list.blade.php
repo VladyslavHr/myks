@@ -51,7 +51,7 @@
         <div class="col-lg-4 py-3">
             <h4 class="text-center">{{ $trick->title }}</h4>
             <iframe class="video" style="width:100%; min-height: 400px"
-            src="https://www.youtube.com/embed/{{$trick->video}}" allowfullscreen>
+            src="https://www.youtube.com/embed/{{$trick->video}}" allowfullscreen  data-title="{{$trick->seo_title}}" data-keywords="{{$trick->seo_keywords}}" data-description="{{$trick->seo_description}}">
             </iframe>
         </div>
         @endforeach

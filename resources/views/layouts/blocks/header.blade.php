@@ -15,9 +15,9 @@
           <li class="nav-item">
             <a class="nav-link link-menu" href="{{ route('videoLectureCategory.index') }}">Video Lekce</a>
           </li>
-          {{-- <li class="nav-item">
-            <a class="nav-link" href="#">Projekty</a>
-          </li> --}}
+          <li class="nav-item">
+            <a class="nav-link link-menu" href="{{ route('home.companyInfo') }}">O nás</a>
+          </li>
           <li class="nav-item">
             <a class="nav-link link-menu" href="{{ route('contact.index') }}">Kontakt</a>
           </li>
