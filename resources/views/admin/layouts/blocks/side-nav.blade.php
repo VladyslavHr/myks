@@ -197,6 +197,34 @@
                                 <a class="nav-link" href="{{ route('admin.trick.create') }}">Створити коротке відео</a>
                             </nav>
                         </div>
+                        <a class="nav-link collapsed" href="javascript:void(0);" data-bs-toggle="collapse" data-bs-target="#collapsePostCategory" aria-expanded="false" aria-controls="collapsePostCategory">
+                            <div class="nav-link-icon">
+                                <i class="material-icons">app_shortcut</i>
+                            </div>
+                            Категорії блогу
+                            <div class="drawer-collapse-arrow"><i class="material-icons">expand_more</i></div>
+                        </a>
+                        <!-- Nested drawer nav (Forms)-->
+                        <div class="collapse" id="collapsePostCategory" aria-labelledby="headingOne" data-bs-parent="#drawerAccordion">
+                            <nav class="drawer-menu-nested nav">
+                                <a class="nav-link" href="{{ route('admin.postCategory.index') }}">Список категорій блогу</a>
+                                <a class="nav-link" href="{{ route('admin.postCategory.create') }}">Створити катугорію блогу</a>
+                            </nav>
+                        </div>
+                        <a class="nav-link collapsed" href="javascript:void(0);" data-bs-toggle="collapse" data-bs-target="#collapsePost" aria-expanded="false" aria-controls="collapsePost">
+                            <div class="nav-link-icon">
+                                <i class="material-icons">app_shortcut</i>
+                            </div>
+                            Блог
+                            <div class="drawer-collapse-arrow"><i class="material-icons">expand_more</i></div>
+                        </a>
+                        <!-- Nested drawer nav (Forms)-->
+                        <div class="collapse" id="collapsePost" aria-labelledby="headingOne" data-bs-parent="#drawerAccordion">
+                            <nav class="drawer-menu-nested nav">
+                                <a class="nav-link" href="{{ route('admin.post.index') }}">Список блогу</a>
+                                <a class="nav-link" href="{{ route('admin.post.create') }}">Створити блог</a>
+                            </nav>
+                        </div>
                         <!-- Drawer link (Utilities)-->
                         {{-- <a class="nav-link collapsed" href="javascript:void(0);" data-bs-toggle="collapse" data-bs-target="#collapseUtilities" aria-expanded="false" aria-controls="collapseUtilities">
                             <div class="nav-link-icon"><i class="material-icons">price_change</i></div>

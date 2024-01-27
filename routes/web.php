@@ -6,6 +6,8 @@ use App\Http\Controllers\Admin\VideoLectureCategoryController as VideoLectureCat
 use App\Http\Controllers\Admin\VideoLectureController as VideoLectureController;
 use App\Http\Controllers\Admin\TrickController as TrickController;
 use App\Http\Controllers\Admin\TrickCategoryController as TrickCategoryController;
+use App\Http\Controllers\Admin\PostCategoryController as PostCategoryController;
+use App\Http\Controllers\Admin\PostController as PostController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -24,6 +26,12 @@ Route::get('o-nas', [App\Http\Controllers\HomeController::class, 'companyInfo'])
 // Video Lecture
 Route::get('/video-lekce', [App\Http\Controllers\VideoLectureCategoryController::class, 'index'])->name('videoLectureCategory.index');
 Route::get('/video-lekce/{slug}', [App\Http\Controllers\VideoLectureCategoryController::class, 'show'])->name('videoLectureCategory.show');
+
+// Post
+Route::get('/blog', [App\Http\Controllers\PostController::class, 'index'])->name('post.index');
+Route::get('/blog/{slug}', [App\Http\Controllers\PostController::class, 'show'])->name('post.show');
+// Route::get('/blog', [App\Http\Controllers\PostCategoryController::class, 'index'])->name('postCategory.index');
+// Route::get('/blog/{slug}', [App\Http\Controllers\PostCategoryController::class, 'show'])->name('postCategory.show');
 
 // Tricks
 Route::get('triky', [App\Http\Controllers\TrickController::class, 'index'])->name('trick.index');
@@ -68,6 +76,22 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth']], function() {
     Route::post('/trick/store', [TrickController::class, 'store'])->name('admin.trick.store');
     Route::post('/trick/update/{trick}', [TrickController::class, 'update'])->name('admin.trick.update');
     Route::delete('/trick/delete/{trick}', [TrickController::class, 'delete'])->name('admin.trick.delete');
+
+    // Post Category
+    Route::get('/post-category', [PostCategoryController::class, 'index'])->name('admin.postCategory.index');
+    Route::get('/post-category/create', [PostCategoryController::class, 'create'])->name('admin.postCategory.create');
+    Route::get('/post-category/edit/{postCategory}', [PostCategoryController::class, 'edit'])->name('admin.postCategory.edit');
+    Route::post('/post-category/store', [PostCategoryController::class, 'store'])->name('admin.postCategory.store');
+    Route::post('/post-category/update/{postCategory}', [PostCategoryController::class, 'update'])->name('admin.postCategory.update');
+    Route::delete('/post-category/delete/{postCategory}', [PostCategoryController::class, 'delete'])->name('admin.postCategory.delete');
+
+    // Post
+    Route::get('/post', [PostController::class, 'index'])->name('admin.post.index');
+    Route::get('/post/create', [PostController::class, 'create'])->name('admin.post.create');
+    Route::get('/post/edit/{post}', [PostController::class, 'edit'])->name('admin.post.edit');
+    Route::post('/post/store', [PostController::class, 'store'])->name('admin.post.store');
+    Route::post('/post/update/{post}', [PostController::class, 'update'])->name('admin.post.update');
+    Route::delete('/post/delete/{post}', [PostController::class, 'delete'])->name('admin.post.delete');
 });
 
 Auth::routes();

@@ -12,6 +12,9 @@
           <li class="nav-item active">
             <a class="nav-link link-menu" href="{{ route('trick.index') }}">Triky</a>
           </li>
+          <li class="nav-item active">
+            <a class="nav-link link-menu" href="{{ route('post.index') }}">Blog</a>
+          </li>
           <li class="nav-item">
             <a class="nav-link link-menu" href="{{ route('videoLectureCategory.index') }}">Video Lekce</a>
           </li>
