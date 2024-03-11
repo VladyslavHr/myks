@@ -14,9 +14,9 @@
         @csrf
         <div class="row">
             <div class="mb-3 col-md-6">
-                <label for="" class="form-label">Назва відео</label>
+                <label for="" class="form-label">Назва</label>
                 <input name="title" value="{{ old('title') }}" type="text" class="form-control" id="">
-                <span class="form-text">Будь ласка напишіть назву відео.</span>
+                <span class="form-text">Будь ласка напишіть назву.</span>
             </div>
             <div class="mb-3 col-md-6">
                 <span class="form-text">Оберіть будь ласка категорію блогу.</span>

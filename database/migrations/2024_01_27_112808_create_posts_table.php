@@ -19,7 +19,7 @@ return new class extends Migration
             $table->bigInteger('user_id');
             $table->bigInteger('post_category_id');
             $table->string('title');
-            $table->text('text')->nullable();
+            $table->longtext('text')->nullable();
             $table->string('image')->nullable();
             $table->string('seo_title')->nullable();
             $table->string('seo_keywords')->nullable();

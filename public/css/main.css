@@ -16,6 +16,11 @@ select {
     border-radius: 2px!important;
 }
 
+.word-break{
+    word-break: break-word;
+}
+
+
 input:focus,
 textarea:focus,
 select:focus {
@@ -122,4 +127,30 @@ select:focus {
 
 .contact-firma-left-title{
     color: #fff!important;
+}
+
+
+/* POST */
+.post-main-image {
+    position: relative; /* Устанавливаем контейнер как относительно позиционированный */
+    width: 100%;
+    height: 300px; /* Вы можете настроить высоту по вашему желанию */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center; /* Центрируем содержимое по горизонтали */
+    align-items: center; /* Центрируем содержимое по вертикали */
+}
+
+.post-title {
+    color: white; /* Устанавливаем цвет текста */
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.6); /* Добавляем тень к тексту для улучшения читаемости */
+    background-color: rgba(0,0,0,0.4); /* Добавляем полупрозрачный черный фон за текстом */
+    padding: 10px 20px; /* Немного отступов вокруг текста */
+    border-radius: 5px; /* Скругляем углы фона за текстом */
+}
+
+.post-text img{
+    max-width: 100%;
+    height: auto;
 }

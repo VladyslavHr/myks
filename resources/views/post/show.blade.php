@@ -4,15 +4,12 @@
 @section('keywords', $post->seo_keywords)
 
 @section('content')
+    <div class="post-main-image" style="background-image: url('{{$post->image}}');">
+        <h1 class="post-title">{{ $post->title }}</h1>
+    </div>
     <div class="container py-5">
-        <h1 class="text-center">{{ $post->title }}</h1>
-        <div class="row justify-content-center">
-            <div class="col-lg-2">
-                <img style="width:100%" alt="" src="{{$post->image}}">
-
-            </div>
+        <div class="word-break post-text" >
+            {!! $post->text !!}
         </div>
-
-        {!! $post->text !!}
     </div>
 @endsection
