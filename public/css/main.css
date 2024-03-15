@@ -4,6 +4,10 @@ h3 {
     color: #2b3595;
 }
 
+.image{
+    width: 100%;
+}
+
 h4,
 h5 {
     color: #fb7f00!important;
@@ -47,6 +51,17 @@ select:focus {
     color: #2b3595;
 }
 
+.link-style:hover{
+    background: #2b3595;
+    transition: 0.4s;
+    color: #fb7f00;
+}
+
+.link-style.active{
+    background-color: #2b3595!important;
+    color: #fb7f00!important;
+}
+
 .link-menu:hover{
     color: #fb7f00;
     transition: 0.3s;
@@ -58,7 +73,7 @@ select:focus {
 
 .bg-header-footer{
     /* background-color: #e8e8ed; */
-    background-color: #e4e4fd;
+    /* background-color: #e4e4fd; */
     /* e4e4fd */
 }
 
@@ -129,7 +144,65 @@ select:focus {
     color: #fff!important;
 }
 
+/* Home */
+.wrap-for-img{
+    width: 70%;
+    position: relative;
+    overflow: hidden;
+    height: 670px;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1));
+}
 
+.wrap-for-img img{
+    border-radius: 9%;
+}
+
+.mirror-image{
+    position: absolute;
+    width: 100%;
+    transform: scaleY(-1);
+    /* opacity: 0; */
+    top: 445px;
+    left: 0;
+    z-index: -1;
+}
+
+.home-ul {
+    list-style-type: disc; /* Или любой другой тип маркера, который вы хотите использовать */
+    padding: 0; /* Убираем стандартный padding, чтобы точки были ближе к тексту */
+    margin: 0 auto; /* Автоматические отступы слева и справа для центрирования */
+    display: table; /* Заставляет элемент вести себя как таблица, что облегчает центрирование */
+}
+
+.home-ul li {
+    text-align: left; /* Текст элементов списка выравнивается по левому краю */
+    font-size: 21px;
+}
+
+.wrap-programs-img{
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.prog-image{
+    width: 40%;
+}
+
+.prog-image-q{
+    width: 17%;
+}
+
+.prog-image-excel{
+    width: 13%;
+}
+
+.prog-image-powerbi{
+    width: 60%;
+}
+
+.prog-image-sql{
+    width: 40%;
+}
 /* POST */
 .post-main-image {
     position: relative; /* Устанавливаем контейнер как относительно позиционированный */
@@ -153,4 +226,167 @@ select:focus {
 .post-text img{
     max-width: 100%;
     height: auto;
+}
+
+/* About us */
+.block-firm-imfo{
+    background-color: #ad70cb42; /* Светлый фон для контраста */
+    border-radius: 10px; /* Округлые углы */
+    padding: 20px; /* Отступ внутри блоков */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Тень для создания "плавающего" эффекта */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Плавное изменение при наведении */
+    text-align: center;
+    min-height: 115px;
+    /* cursor: pointer; */
+}
+
+.block-firm-imfo:hover{
+    transform: translateY(-5px); /* Поднимает блок при наведении */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Увеличивает тень для создания эффекта глубины */
+}
+
+.work-firm-info{
+    font-size: 20px;
+}
+
+@media (max-width: 1399px){
+    .mirror-image{
+        top: 382px;
+    }
+}
+@media (max-width: 1199px){
+    .mirror-image{
+        top: 318px;
+    }
+}
+
+@media (max-width: 991px){
+    .wrap-for-img{
+        width: 100%;
+        text-align: center;
+        margin-bottom: 50px;
+    }
+
+    .wrap-for-img img{
+        width: 70%
+    }
+
+    .mirror-image{
+        top: 487px;
+        left: 109px;
+    }
+}
+
+@media (max-width: 767px){
+    .wrap-for-img{
+        width: 100%;
+        text-align: center;
+        margin-bottom: 50px;
+    }
+
+    .wrap-for-img img{
+        width: 70%
+    }
+
+    .mirror-image{
+        top: 360px;
+        left: 85px;
+    }
+
+    .prog-img-small{
+        width: 100%;
+    }
+
+    .prog-image-q{
+        width: 25%;
+    }
+
+    .prog-image-excel{
+        width: 15%;
+    }
+
+    .prog-image-powerbi{
+        width: 60%;
+    }
+
+    .prog-image-sql{
+        width: 30%;
+    }
+
+    .small-qlik{
+        padding-top: 45px;
+        padding-bottom: 15px;
+    }
+
+    .small-excel{
+        padding-top: 45px;
+    }
+}
+
+@media (max-width: 576px){
+    .wrap-for-img{
+        width: 100%;
+        text-align: center;
+        margin-bottom: 0px;
+        height: 400px;
+    }
+
+    .wrap-for-img img{
+        width: 70%
+    }
+
+    .mirror-image{
+        /* top: 385px;
+        left: 85px; */
+        top: 273px;
+        left: 63px;
+    }
+
+    .prog-img-small{
+        width: 100%;
+    }
+}
+
+@media (max-width: 376px){
+    .wrap-for-img{
+        width: 100%;
+        text-align: center;
+        margin-bottom: 0px;
+        height: 385px;
+    }
+
+    .wrap-for-img img{
+        width: 70%
+    }
+
+    .mirror-image{
+        top: 244px;
+        left: 58px;
+    }
+
+    .prog-img-small{
+        width: 100%;
+    }
+}
+
+@media (max-width: 280px){
+    .wrap-for-img{
+        width: 100%;
+        text-align: center;
+        margin-bottom: 0px;
+        height: 330px;
+    }
+
+    .wrap-for-img img{
+        width: 70%
+    }
+
+    .mirror-image{
+        top: 178px;
+        left: 42px;
+    }
+
+    .prog-img-small{
+        width: 100%;
+    }
 }

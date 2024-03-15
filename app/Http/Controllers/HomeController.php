@@ -32,4 +32,8 @@ class HomeController extends Controller
     public function companyInfo() {
         return view('home.companyInfo');
     }
+
+    public function founderInfo(){
+        return view('home.founderInfo');
+    }
 }

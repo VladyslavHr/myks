@@ -21,7 +21,8 @@ use App\Http\Controllers\Admin\PostController as PostController;
 Route::get('/sitemap.xml', [App\Http\Controllers\Controller::class, 'sitemap'])->name('sitemap');
 
 Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home.index');
-Route::get('o-nas', [App\Http\Controllers\HomeController::class, 'companyInfo'])->name('home.companyInfo');
+Route::get('o-spolecnosti', [App\Http\Controllers\HomeController::class, 'companyInfo'])->name('home.companyInfo');
+Route::get('o-zakladatelce', [App\Http\Controllers\HomeController::class, 'founderInfo'])->name('home.founderInfo');
 
 // Video Lecture
 Route::get('/video-lekce', [App\Http\Controllers\VideoLectureCategoryController::class, 'index'])->name('videoLectureCategory.index');
