@@ -1,4 +1,7 @@
 @extends('layouts.app')
+@section('title', 'O společnosti - Automatizace Reportování a Vývoj Dashboardů')
+@section('description', 'Zjistěte více o naší společnosti, která se specializuje na automatizaci korporátního reportování, vývoj manažerských dashboardů a školení práce s daty. Pomáháme firmám zefektivnit jejich procesy a dosáhnout obchodních cílů.')
+@section('keywords', 'automatizace reportování, vývoj dashboardů, školení práce s daty, podnikové úkoly, KPI, metriky, firemní růst')
 
 @section('content')
     <div class="container py-5">

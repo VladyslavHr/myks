@@ -29,12 +29,18 @@
                     <li><a class="dropdown-item link-style" href="{{ route('post.index') }}">Blog</a></li>
                 </ul>
             </li>
-          <li class="nav-item active">
-            <a class="nav-link link-menu" href="#">Služby </a>
-          </li>
-          <li class="nav-item active">
-            <a class="nav-link link-menu" href="#">Kurzy</a>
-          </li>
+            <li class="nav-item active">
+                <a class="nav-link link-menu" href="{{ route('service.index') }}">Služby </a>
+            </li>
+            <li class="nav-item dropdown ">
+                <a class="nav-link link-menu dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Školení
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item link-style" href="#">Školení pro firmy</a></li>
+                    <li><a class="dropdown-item link-style" href="#">BI akademie</a></li>
+                </ul>
+            </li>
           {{-- <li class="nav-item active">
             <a class="nav-link link-menu" href="{{ route('post.index') }}">Blog</a>
           </li> --}}
@@ -51,4 +57,15 @@
         </script>
       </div>
     </div>
+    @if(session('success'))
+        <div class="alert alert-success">
+            {{ session('success') }}
+        </div>
+    @endif
+
+    @if(session('error'))
+        <div class="alert alert-danger">
+            {{ session('error') }}
+        </div>
+    @endif
 </nav>

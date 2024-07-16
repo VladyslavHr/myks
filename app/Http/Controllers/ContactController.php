@@ -33,23 +33,28 @@ class ContactController extends Controller
 
         $data = $request->validate($rules, $message);
 
-        Contact::create($data);
+        $contact = Contact::create($data);
 
-        \Mail::send('emails.contact.incoming', [
-                'email' => $request->email,
-                'name' => $request->name,
-                'text' => $request->text,
-            ],
-            function ($message) use ($request) {
-            $message->from(env('MAIL_USERNAME', 'info@myks.cz'), env('APP_NAME'));
-            $message->to('info@myks.cz', 'myks.cz');
-            $message->bcc('mykheicheva@gmail.com', 'myks.cz');
-            $message->bcc('vladyslavhrebennikov@gmail.com', 'myks.cz');
-            $message->replyTo($request->email, $request->name);
-            $message->subject('Odpoved´ z kontaktního formulaře');
-        });
-
-        return redirect()->route('home.index');
+        if ($contact) {
+            \Mail::send('emails.contact.incoming', [
+                    'email' => $request->email,
+                    'name' => $request->name,
+                    'text' => $request->text,
+                ],
+                function ($message) use ($request) {
+                $message->from(env('MAIL_USERNAME', 'info@myks.cz'), env('APP_NAME'));
+                $message->to('info@myks.cz', 'myks.cz');
+                $message->bcc('mykheicheva@gmail.com', 'myks.cz');
+                $message->bcc('vladyslavhrebennikov@gmail.com', 'myks.cz');
+                $message->replyTo($request->email, $request->name);
+                $message->subject('Odpoved´ z kontaktního formulaře');
+            });
+        return redirect()->back()->with('success', 'Vaše zpráva byla úspěšně odeslána.');
+        } else {
+            return redirect()->back()->with('error', 'Chyba při ukládání zprávy. Prosím, zkuste to znovu.');
+        }
+        // return redirect()->back();
+        // return redirect()->route('home.index');
     }
 
     // public function payAndDelivery()

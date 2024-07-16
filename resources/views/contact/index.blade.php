@@ -1,5 +1,9 @@
 @extends('layouts.app')
 
+@section('title', 'Kontaktujte nás - Kurzy Power BI a Excel')
+@section('description', 'Máte otázky nebo potřebujete pomoc s našimi kurzy Power BI a Excel? Kontaktujte nás prostřednictvím tohoto formuláře. Jsme tu, abychom vám pomohli s registrací, informacemi o kurzech a dalšími dotazy.')
+@section('keywords', 'kontakt, Power BI, Excel, kurzy, školení, dotazy, pomoc, registrace')
+
 @section('content')
 {!! RecaptchaV3::initJs() !!}
 {{-- <div class="bg-image"></div> --}}
@@ -28,7 +32,9 @@
                         </strong>
                     </span>
                     <span>
-                        +420 000 000 000
+                        <a class="contact-phone" href="tel:+420703424840">
+                            +420 703 424 840
+                        </a>
                     </span>
                 </div>
                 <div class="contact-el">

@@ -1,4 +1,7 @@
 @extends('layouts.app')
+@section('title', 'O zakladatelce - Mykheicheva Sofie')
+@section('description', 'Zjistěte více o Sofii Mykheichevé, uznávané profesionálce s dlouholetou praxí v oblasti obchodní analýzy. Sofia má na svém kontě prestižní kurzy a aktivně se podílí na vzdělávání a školení v oblasti vizualizace a analýzy dat.')
+@section('keywords', 'Sofie Mykheicheva, zakladatelka, obchodní analýza, vizualizace dat, školení, vzdělávání, strategické myšlení')
 
 @section('content')
     <div class="container py-5">
