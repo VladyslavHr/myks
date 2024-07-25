@@ -2,10 +2,10 @@ a {
     text-decoration: none;
 }
 
-h1,
 h2,
 h3,
-h4 {
+h4,
+h5 {
     color: #2b3595!important;
     /* color: #7e1ca1; */
 }
@@ -14,9 +14,9 @@ h4 {
     width: 100%;
 }
 
-h5 {
+/* h5 {
     color: #7d7c7c!important;
-}
+} */
 
 input,
 textarea,
@@ -168,6 +168,14 @@ select:focus {
     color: #fff!important;
 }
 
+.container-block-form{
+    padding: 3rem;
+}
+
+.block-contact-form{
+    padding: 3rem;
+}
+
 /* Home */
 .wrap-for-img{
     width: 70%;
@@ -192,15 +200,34 @@ select:focus {
 }
 
 .home-ul {
-    list-style-type: disc; /* Или любой другой тип маркера, который вы хотите использовать */
+    list-style-type: none; /* Или любой другой тип маркера, который вы хотите использовать */
     padding: 0; /* Убираем стандартный padding, чтобы точки были ближе к тексту */
     margin: 0 auto; /* Автоматические отступы слева и справа для центрирования */
-    display: table; /* Заставляет элемент вести себя как таблица, что облегчает центрирование */
+    /* display: table; Заставляет элемент вести себя как таблица, что облегчает центрирование */
 }
 
 .home-ul li {
-    text-align: left; /* Текст элементов списка выравнивается по левому краю */
+    text-align: center; /* Текст элементов списка выравнивается по левому краю */
     font-size: 21px;
+    /* display: flex; /* Используем Flexbox для выравнивания элементов */
+    /* align-items: center; Выравниваем элементы по центру по вертикали */
+}
+
+.home-ul li img {
+    margin-right: 10px; /* Отступ справа от изображения */
+    width: 5%;
+}
+
+.home-icon-svg{
+    width: 10%;
+}
+
+.home-table{
+    width: 30%;
+}
+
+.home-table-text{
+    font-size: 24px;
 }
 
 .wrap-programs-img{
@@ -213,15 +240,15 @@ select:focus {
 }
 
 .prog-image-q{
-    width: 17%;
+    width: 14%;
 }
 
 .prog-image-excel{
-    width: 13%;
+    width: 10%;
 }
 
 .prog-image-powerbi{
-    width: 60%;
+    width: 65%;
 }
 
 .prog-image-sql{
@@ -273,7 +300,14 @@ select:focus {
     font-size: 20px;
 }
 
+.sorting-select{
+    font-size: 12px;
+}
 
+/* Company */
+.image-company-info{
+    width: 65%;
+}
 /* Service */
 .image-service{
     width: 50%;
@@ -281,7 +315,7 @@ select:focus {
 
 .img-servic-wrap{
     text-align: center;
-    min-height: 210px;
+    /* min-height: 210px; */
 }
 
 .wrap-service-body{
@@ -336,14 +370,170 @@ select:focus {
     border-radius: 11px;
 }
 
+.svg-icon-service-wrap{
+    text-align: center;
+}
+
+.svg-icon-service{
+    max-width: 50%;
+    text-align: center;
+    display: -webkit-inline-box;
+}
+
+
+.step-left-1{
+    width: 20%;
+    border-bottom: 2px solid #2b3595;
+}
+
+.step-left-1 h5{
+    margin-left: 5px;
+
+}
+.step-left-2,
+.step-left-3,
+.step-left-4,
+.step-left-5,
+.step-left-6{
+    width: 20%;
+    border-right: 2px solid #2b3595;
+}
+
+.step-right-2{
+    width: 20%;
+    border-bottom: 2px solid #2b3595;
+}
+.step-right-2 h5{
+    margin-top: 45%;
+    margin-left: 5px;
+}
+.step-right-3{
+    width: 20%;
+    border-bottom: 2px solid #2b3595;
+}
+.step-right-3 h5{
+    margin-top: 45%;
+    margin-left: 5px;
+}
+.step-right-4{
+    width: 20%;
+    border-bottom: 2px solid #2b3595;
+}
+.step-right-4 h5{
+    margin-top: 42%;
+    margin-left: 5px;
+}
+.step-right-5{
+    width: 20%;
+    border-bottom: 2px solid #2b3595;
+}
+.step-right-5 h5{
+    margin-top: 27%;
+    margin-left: 5px;
+}
+
+.step-empty{
+    width: 20%;
+}
+
+.service-firm-rep{
+    border: 2px solid #2b3595;
+    padding: 20px;
+    border-radius: 25px;
+}
+
+.service-ul-center-wrap{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.service-ul-center{
+    padding: 20px;
+    list-style: auto;
+}
+
+.service-dot{
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    background-color: #2b3595;
+    border-radius: 50%;
+    margin-top: 7px;
+    float: right;
+}
+
+.service-dot-small-screan{
+    display: none;
+}
+
+.service-svg-net-viz-dat{
+    width: 15%;
+    margin-right: 40px;
+}
+
+.service-block-wrap{
+    border: 1px solid;
+    padding: 20px;
+    min-height: 220px;
+}
+
 @media (max-width: 1399px){
     .mirror-image{
         top: 382px;
+    }
+
+    .step-right-2 h5{
+        margin-top: 53%;
+    }
+    .step-right-3 h5{
+        margin-top: 64%;
+    }
+    .step-right-4 h5{
+        margin-top: 63%;
+
+    }
+    .step-right-5 h5{
+        margin-top: 42%;
+    }
+
+    .service-block-wrap{
+        min-height: 233px;
     }
 }
 @media (max-width: 1199px){
     .mirror-image{
         top: 318px;
+    }
+
+    .block-firm-imfo{
+        padding: 37px;
+    }
+
+    .home-table{
+        width: 20%;
+    }
+
+    .home-icon-svg{
+        width: 25%;
+    }
+
+    .step-right-2 h5{
+        margin-top: 88%;
+    }
+    .step-right-3 h5{
+        margin-top: 100%;
+    }
+    .step-right-4 h5{
+        margin-top: 88%;
+
+    }
+    .step-right-5 h5{
+        margin-top: 63%;
+    }
+    .service-block-wrap{
+        min-height: 275px;
     }
 }
 
@@ -361,6 +551,64 @@ select:focus {
     .mirror-image{
         top: 487px;
         left: 109px;
+    }
+
+    .container-block-form{
+        padding: 1rem;
+    }
+
+    .block-contact-form{
+        padding: 0;
+    }
+
+    .contact-form-wrap{
+        padding: 10px;
+    }
+
+    .block-firm-imfo{
+        padding: 37px;
+        margin-bottom: 15px;
+    }
+
+    .home-table{
+        width: 33%;
+    }
+
+    .home-icon-svg{
+        width: 11%;
+    }
+
+    .step-wrap{
+        flex-wrap: wrap;
+    }
+
+    .step-left-1,
+    .step-left-2,
+    .step-left-3,
+    .step-left-4,
+    .step-left-5,
+    .step-left-6{
+        width: 100%;
+        border-right: 0px solid #2b3595;
+    }
+    .step-right-1,
+    .step-right-2,
+    .step-right-3,
+    .step-right-4,
+    .step-right-5,
+    .step-right-6{
+        width: 100%;
+    }
+    .step-right-1 h5,
+    .step-right-2 h5,
+    .step-right-3 h5,
+    .step-right-4 h5,
+    .step-right-5 h5,
+    .step-right-6 h5{
+        margin-top: 3%;
+    }
+    .service-block-wrap{
+        min-height: 0px;
     }
 }
 
@@ -385,7 +633,7 @@ select:focus {
     }
 
     .prog-image-q{
-        width: 25%;
+        width: 22%;
     }
 
     .prog-image-excel{
@@ -407,6 +655,13 @@ select:focus {
 
     .small-excel{
         padding-top: 45px;
+    }
+
+    .image-company-info{
+        width: 45%;
+    }
+    .work-firm-info{
+        text-align: center;
     }
 }
 
@@ -432,6 +687,26 @@ select:focus {
     .prog-img-small{
         width: 100%;
     }
+
+    .home-table{
+        width: 15%;
+    }
+
+    .home-icon-svg{
+        width: 60%;
+    }
+
+    .service-dot{
+        display: none;
+    }
+    .service-dot-small-screan{
+        display: inline-block;
+        width: 15px;
+        height: 15px;
+        background-color: #2b3595;
+        border-radius: 50%;
+        margin-top: 7px;
+    }
 }
 
 @media (max-width: 376px){
@@ -453,6 +728,14 @@ select:focus {
 
     .prog-img-small{
         width: 100%;
+    }
+
+    .home-table{
+        width: 10%;
+    }
+
+    .home-icon-svg{
+        width: 80%;
     }
 }
 

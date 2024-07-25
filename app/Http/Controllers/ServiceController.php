@@ -12,4 +12,16 @@ class ServiceController extends Controller
 
         ]);
     }
+
+    public function system_firm_report(){
+        return view('services.system_firm_report', [
+
+        ]);
+    }
+
+    public function netradicni_vizualizace_dat(){
+        return view('services.netradicni_vizualizace_dat', [
+
+        ]);
+    }
 }

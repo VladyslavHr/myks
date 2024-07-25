@@ -3,7 +3,7 @@
     <div class="row">
         <div class="col-lg-12">
             <ul class="tricky-category-list">
-                <li class="category-item">
+                <li class="category-item py-3">
                     <a href="/tricky-vsechny"
                         class="tricky-category-list-link @if ($choosenCategorySlug === 'all')
                             tricky-categoty-list-link-active
@@ -17,7 +17,7 @@
                 </li>
                 @foreach ($categories as $category)
                     @if (count($category->posts))
-                    <li class="category-list-element">
+                    <li class="category-list-element py-3">
                         <a href="/tricky?categoria={{$category->slug}}"
                             class="tricky-category-list-link @if ($category->slug == $choosenCategorySlug) tricky-categoty-list-link-active @endif"
                             wire:click.prevent="changeCategory('{{ $category->slug }}')">
@@ -37,8 +37,8 @@
             <select wire:model="sortingSelectValue" class="form-select sorting-select">
                 <option value="title/asc">A-Z</option>
                 <option value="title/desc">Z-A</option>
-                <option value="created_at/asc">Nový</option>
-                <option value="created_at/desc">Starý</option>
+                <option value="created_at/desc">Nový</option>
+                <option value="created_at/asc">Starý</option>
             </select>
         </div>
         <div class="col-lg-9">
@@ -48,11 +48,11 @@
     </div>
     <div class="row">
         @foreach ($posts as $post)
-        <a href="{{ route('post.show', $post->slug) }}" class="col-lg-4 py-3">
-            <h4 class="text-center">{{ $post->title }}</h4>
+        <a href="{{ route('post.show', $post->slug) }}" class="col-lg-3 py-3">
             <div class="">
                 <img style="width: 100%" src="{{$post->image}}" alt="">
             </div>
+            <h5 class="text-center pt-2">{{ $post->title }}</h5>
         </a>
         @endforeach
     </div>

@@ -37,8 +37,8 @@
             <select wire:model="sortingSelectValue" class="form-select sorting-select">
                 <option value="title/asc">A-Z</option>
                 <option value="title/desc">Z-A</option>
-                <option value="created_at/asc">Nový</option>
-                <option value="created_at/desc">Starý</option>
+                <option value="created_at/desc">Nový</option>
+                <option value="created_at/asc">Starý</option>
             </select>
         </div>
         <div class="col-lg-9">

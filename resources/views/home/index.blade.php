@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Kurz Úvod do Power BI a Excel,')
+@section('title', 'Myks: Řízení dat pro efektivní rozhodování')
 @section('description', 'Kurzy MS Excel - všechny stupně pokročilosti. Naučte se ovládat Power BI desktop. Výkonný a sofistikovaný nástroj od firmy Microsoft, ve kterém dokážete elegantně vytvořit provázané vizualizace.')
 @section('keywords', 'Power BI , Excel, Efektivní analýza dat a reporting (PWBI1), PWBI1, Microsoft Office, Power BI, Kurz, Školení')
 
@@ -25,23 +25,57 @@
                 </div>
             </div>
             <div class="col-lg-6">
-                <h3 class="text-center">Management založený na datech</h3>
-                <ul class="home-ul py-3">
-                    <li class="py-1">Implementace BI systémů</li>
-                    <li class="py-1">Vzdělávání pro analytiky</li>
-                    <li class="py-1">Konzultace pro manažery</li>
-                    <li class="py-1">Rozvoj Data-Driven kultury</li>
-                </ul>
+                <h2 class="text-center pb-3">Management založený na datech</h2>
+                <div class="row">
+                    <div class="col-12">
+                        <table class="table table-borderless">
+                            <tbody>
+                                <tr>
+                                    <td class="text-end align-middle home-table">
+                                        <img src="{{ asset('svg/Implementace.svg')}}" alt="" class="home-icon-svg">
+                                    </td>
+                                    <td class="text-start align-middle home-table-text">
+                                        Implementace BI systémů
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="text-end align-middle home-table">
+                                        <img src="{{ asset('svg/Skoleni.svg')}}" alt="" class="home-icon-svg">
+                                    </td>
+                                    <td class="text-start align-middle home-table-text">
+                                        Vzdělávání pro analytiky
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="text-end align-middle home-table">
+                                        <img src="{{ asset('svg/Konzultace.svg')}}" alt="" class="home-icon-svg">
+                                    </td>
+                                    <td class="text-start align-middle home-table-text">
+                                        Konzultace pro manažery
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="text-end align-middle home-table">
+                                        <img src="{{ asset('svg/Data_driven.svg')}}" alt="" class="home-icon-svg">
+                                    </td>
+                                    <td class="text-start align-middle home-table-text">
+                                        Rozvoj Data-Driven kultury
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
 
                 <div class="d-flex wrap-programs-img pt-5">
-                    <div class="text-center col-md-6 prog-img-small">
-                        <img class="prog-image-powerbi" src="{{asset('programs-img/Power_BI.jfif')}}" alt="">
+                    <div class="text-center col-md-12 prog-img-small small-qlik">
+                        <img class="prog-image-q" src="{{asset('programs-img/qlik.png')}}" alt="">
                     </div>
                     <div class="text-center col-md-6 prog-img-small">
                         <img class="prog-image" src="{{asset('programs-img/tableau.png')}}" alt="">
                     </div>
-                    <div class="text-center col-md-12 prog-img-small small-qlik">
-                        <img class="prog-image-q" src="{{asset('programs-img/qlik.png')}}" alt="">
+                    <div class="text-center col-md-6 prog-img-small">
+                        <img class="prog-image-powerbi" src="{{asset('programs-img/Power_BI.jfif')}}" alt="">
                     </div>
                     <div class="text-center col-md-6 prog-img-small">
                         <img class="prog-image" src="{{asset('programs-img/azure.png')}}" alt="">

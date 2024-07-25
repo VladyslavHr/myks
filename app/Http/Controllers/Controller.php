@@ -6,73 +6,12 @@ use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Routing\Controller as BaseController;
-use App\Models\{VideoLecture};
+use App\Models\{VideoLecture,Post};
 use Illuminate\Support\Facades\Route;
 
 class Controller extends BaseController
 {
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
-
-    // public function sitemap()
-    // {
-
-
-
-        // $videos = VideoLecture::get(['slug', 'updated_at']);
-
-        // foreach ($videos as $video){
-        //     $content .= '<url>
-        //     <loc>'. route('videoLectureCategory.show', $video->slug) .'</loc>
-        //     <lastmod>'. $video->updated_at->format('Y-m-d') .'</lastmod>
-        //     <changefreq>daily</changefreq>
-        //     <priority>0.5</priority>
-        //   </url>';
-        // }
-
-        // $productTypes = ProductType::get(['slug', 'updated_at']);
-
-        // foreach ($productTypes as $productType){
-        //     $content .= '<url>
-        //     <loc>'. route('productTypes.show', $productType->slug) .'</loc>
-        //     <lastmod>'. $productType->updated_at->format('Y-m-d') .'</lastmod>
-        //     <changefreq>monthly</changefreq>
-        //     <priority>0.5</priority>
-        //   </url>';
-        // }
-
-        // $content .= '<url>
-        // <loc>'. route('home.index') .'</loc>
-        // <lastmod>'. date('Y-m-d') .'</lastmod>
-        // <changefreq>daily</changefreq>
-        // <priority>1.0</priority>
-        // </url>';
-
-        // $content .= '<url>
-        // <loc>'. route('trick.index') .'</loc>
-        // <lastmod>'. date('Y-m-d') .'</lastmod>
-        // <changefreq>daily</changefreq>
-        // <priority>0.5</priority>
-        // </url>';
-
-        // $content .= '<url>
-        // <loc>'. route('videoLectureCategory.index') .'</loc>
-        // <lastmod>'. date('Y-m-d') .'</lastmod>
-        // <changefreq>daily</changefreq>
-        // <priority>0.5</priority>
-        // </url>';
-
-        // $content .= '<url>
-        // <loc>'. route('contact.index') .'</loc>
-        // <lastmod>'. date('Y-m-d') .'</lastmod>
-        // <changefreq>daily</changefreq>
-        // <priority>0.5</priority>
-        // </url>';
-
-        // $content .= '</urlset>';
-
-        // return response($content)->header('Content-Type', 'text/xml');
-    // }
-
 
     public function sitemap()
     {
@@ -90,6 +29,16 @@ class Controller extends BaseController
           </url>';
         }
 
+        $posts = Post::get(['slug', 'updated_at']);
+        foreach ($posts as $post) {
+            $content .= '<url>
+            <loc>' . route('post.show', $post->slug) . '</loc>
+            <lastmod>' . $post->updated_at->format('Y-m-d') . '</lastmod>
+            <changefreq>daily</changefreq>
+            <priority>0.5</priority>
+          </url>';
+        }
+
         // Adding static pages
         $staticRoutes = [
             'home.index',
@@ -99,6 +48,8 @@ class Controller extends BaseController
             'trick.index',
             'contact.index',
             'service.index',
+            'service.system_firm_report',
+            'service.netradicni_vizualizace_dat',
             'post.index'
         ];
 

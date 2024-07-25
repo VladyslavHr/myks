@@ -1,7 +1,7 @@
 {!! RecaptchaV3::initJs() !!}
-<div class="row p-5">
+<div class="row block-contact-form">
     <div class="col-md-6">
-        <h2 class="py-3">MYKS.CZ</h2>
+        <h2 class="pb-3">MYKS.CZ</h2>
         <div class="contac-info">
             <div class="contact-el">
                 <span>

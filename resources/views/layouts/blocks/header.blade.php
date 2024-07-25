@@ -24,9 +24,10 @@
                     Databáze znalostí
                 </a>
                 <ul class="dropdown-menu">
-                    <li><a class="dropdown-item link-style" href="{{ route('trick.index') }}">Triky</a></li>
-                    <li><a class="dropdown-item link-style" href="{{ route('videoLectureCategory.index') }}">Video Lekce</a></li>
                     <li><a class="dropdown-item link-style" href="{{ route('post.index') }}">Blog</a></li>
+                    <li><a class="dropdown-item link-style" href="#">Příklady dashboardů v Power BI</a></li>
+                    <li><a class="dropdown-item link-style" href="{{ route('videoLectureCategory.index') }}">Video Lekce</a></li>
+                    <li><a class="dropdown-item link-style" href="{{ route('trick.index') }}">Triky</a></li>
                 </ul>
             </li>
             <li class="nav-item active">

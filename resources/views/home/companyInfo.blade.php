@@ -28,8 +28,9 @@
         <div class="row py-3">
             <div class="col-md-6">
                 <div class="row align-items-center">
-                    <div class="col-md-4">
-                        <img src="{{asset('icons/icon1.png')}}" alt="" class="image">
+                    <div class="col-md-4 text-center">
+                        {{-- <img src="{{asset('icons/icon1.png')}}" alt="" class="image-company-info"> --}}
+                        <img src="{{asset('svg/Vyvijime_dashboardy_podle_vlastni_metodologie.svg')}}" alt="" class="image-company-info">
                     </div>
                     <div class="col-md-8 work-firm-info">
                         Vyvíjíme dashboardy podle vlastní metodologie
@@ -38,8 +39,9 @@
             </div>
             <div class="col-md-6">
                 <div class="row align-items-center">
-                    <div class="col-md-4">
-                        <img src="{{asset('icons/icon2.png')}}" alt="" class="image">
+                    <div class="col-md-4 text-center">
+                        {{-- <img src="{{asset('icons/icon2.png')}}" alt="" class="image-company-info"> --}}
+                        <img src="{{asset('svg/Navrhujem_reseni_vychazejici_z_obchodnich_cilu_klienta.svg')}}" alt="" class="image-company-info">
                     </div>
                     <div class="col-md-8 work-firm-info">
                         Navrhujeme řešení vycházející z obchodních cílů klienta.
@@ -48,8 +50,9 @@
             </div>
             <div class="col-md-6">
                 <div class="row align-items-center">
-                    <div class="col-md-4">
-                        <img src="{{asset('icons/icon3.png')}}" alt="" class="image">
+                    <div class="col-md-4 text-center">
+                        {{-- <img src="{{asset('icons/icon3.png')}}" alt="" class="image-company-info"> --}}
+                        <img src="{{asset('svg/Realizujeme_projekty_pouze_vlastnim_tymem.svg')}}" alt="" class="image-company-info">
                     </div>
                     <div class="col-md-8 work-firm-info">
                         Realizujeme projekty pouze vlastním týmem.
@@ -58,8 +61,9 @@
             </div>
             <div class="col-md-6">
                 <div class="row align-items-center">
-                    <div class="col-md-4">
-                        <img src="{{asset('icons/icon4.png')}}" alt="" class="image">
+                    <div class="col-md-4 text-center">
+                        {{-- <img src="{{asset('icons/icon4.png')}}" alt="" class="image-company-info"> --}}
+                        <img src="{{asset('svg/Sdilime_zkusenosti.svg')}}" alt="" class="image-company-info">
                     </div>
                     <div class="col-md-8 work-firm-info">
                         Sdílíme zkušenosti
