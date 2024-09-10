@@ -41,8 +41,8 @@ Route::post('kontakt/store', [App\Http\Controllers\ContactController::class, 'st
 
 // Services
 Route::get('sluzby', [App\Http\Controllers\ServiceController::class, 'index'])->name('service.index');
-Route::get('system_firemniho_reportingu', [App\Http\Controllers\ServiceController::class, 'system_firm_report'])->name('service.system_firm_report');
-Route::get('netradicni_vizualizace_dat', [App\Http\Controllers\ServiceController::class, 'netradicni_vizualizace_dat'])->name('service.netradicni_vizualizace_dat');
+Route::get('system-firemniho-reportingu', [App\Http\Controllers\ServiceController::class, 'system_firm_report'])->name('service.system_firm_report');
+Route::get('netradicni-vizualizace-dat', [App\Http\Controllers\ServiceController::class, 'netradicni_vizualizace_dat'])->name('service.netradicni_vizualizace_dat');
 
 Route::group(['prefix' => 'admin', 'middleware' => ['auth']], function() {
     // Dashboard

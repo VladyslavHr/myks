@@ -15,7 +15,10 @@
 
     <meta name="robots" content="index, follow">
 
-    <link rel="canonical" href="{{ str_replace('//myks.cz/', '//www.myks.cz/', url()->current()) }}">
+    {{-- <link rel="canonical" href="{{ str_replace('//myks.cz/', '//www.myks.cz/', url()->current()) }}"> --}}
+    {{-- <link rel="canonical" href="{{ url()->current() | replace('myks.cz', 'www.myks.cz') }}"> --}}
+    <link rel="canonical" href="{{ str_replace('://myks.cz', '://www.myks.cz', url()->current()) }}">
+
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">

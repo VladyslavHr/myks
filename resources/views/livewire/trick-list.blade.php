@@ -8,7 +8,8 @@
                         class="tricky-category-list-link @if ($choosenCategorySlug === 'all')
                             tricky-categoty-list-link-active
                         @endif"
-                        wire:click.prevent="changeCategory('all')">
+                        wire:click.prevent="changeCategory('all')"
+                        rel="nofollow">
                             Všechna videa
                         {{-- @if ($choosenCategorySlug === 'all')
                             <i class="bi bi-check-lg"></i>
@@ -20,7 +21,8 @@
                     <li class="category-list-element">
                         <a href="/tricky?categoria={{$category->slug}}"
                             class="tricky-category-list-link @if ($category->slug == $choosenCategorySlug) tricky-categoty-list-link-active @endif"
-                            wire:click.prevent="changeCategory('{{ $category->slug }}')">
+                            wire:click.prevent="changeCategory('{{ $category->slug }}')"
+                            rel="nofollow">
                             {{$category->title}}
                             {{-- @if ($category->slug == $choosenCategorySlug)
                                 <i class="bi bi-check-lg"></i>
