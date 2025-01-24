@@ -10,8 +10,8 @@
     <div class="row py-5">
         <div class="col-lg-6">
             <div class="wrap-for-img">
-                <img src="{{asset('services/system_firemniho_reportingu.png')}}" alt="" class="image">
-                <img src="{{asset('services/system_firemniho_reportingu.png')}}" alt="" class="mirror-image">
+                <img src="{{asset('services/system_firemniho_reportingu.webp')}}" alt="" class="image">
+                <img src="{{asset('services/system_firemniho_reportingu.webp')}}" alt="" class="mirror-image">
             </div>
         </div>
         <div class="col-lg-6">

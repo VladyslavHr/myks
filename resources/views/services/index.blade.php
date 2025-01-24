@@ -6,7 +6,7 @@
 @section('content')
 
 <div class="container py-5">
-    <h1 class="text-center fw-bold">Služby pro vizualizaci dat a BI řešení</h1>
+    <h3 class="text-center">Služby pro vizualizaci dat a BI řešení</h3>
 
     <div class="row py-5">
         <div class="col-md-4">
@@ -14,7 +14,7 @@
                 <img src="{{ asset('services/service1.png') }}" alt="" class="image-service">
             </div> --}}
             <div class="img-servic-wrap">
-                <img src="{{ asset('svg/Dashboardy_v_Power_BI_Qlik_Tableau.svg') }}" class="image-service" alt="Datová úložiště na MS SQL a Azure">
+                <img src="{{ asset('svg/Dashboardy_v_Power_BI_Qlik_Tableau.svg') }}" class="image-service" alt="Dashboardy v Power BI, Qlik, Tableau">
             </div>
             {{-- <div class="svg-icon-service-wrap">
                 <div class="svg-icon-service">
@@ -40,7 +40,7 @@
                     </svg>
                 </div>
             </div> --}}
-            <div class="service-img-text fw-bolder text-center">Dashboardy v Power BI, Qlik, Tableau</div>
+            <div class="service-img-text text-center">Dashboardy v Power BI, Qlik, Tableau</div>
         </div>
         <div class="col-md-4">
             <div class="img-servic-wrap">
@@ -69,14 +69,14 @@
                         </svg> --}}
                 {{-- </div>
             </div> --}}
-            <div class="service-img-text fw-bolder text-center">Datová úložiště na MS SQL a Azure</div>
+            <div class="service-img-text text-center">Datová úložiště na MS SQL a Azure</div>
         </div>
         <div class="col-md-4">
             {{-- <div class="img-servic-wrap">
                 <img src="{{ asset('services/service3.png') }}" alt="" class="image-service">
             </div> --}}
             <div class="img-servic-wrap">
-                <img src="{{ asset('svg/Custom_vizualizace_pro_vase_produkty.svg') }}" class="image-service" alt="Datová úložiště na MS SQL a Azure">
+                <img src="{{ asset('svg/Custom_vizualizace_pro_vase_produkty.svg') }}" class="image-service" alt="Custom vizualizace pro vaše produkty">
             </div>
             {{-- <div class="svg-icon-service-wrap">
                 <div class="svg-icon-service">
@@ -103,7 +103,7 @@
                         </svg>
                 </div>
             </div> --}}
-            <div class="service-img-text fw-bolder text-center">Custom vizualizace pro vaše produkty</div>
+            <div class="service-img-text text-center">Custom vizualizace pro vaše produkty</div>
         </div>
     </div>
 </div>
@@ -113,7 +113,7 @@
             <div class="col-md-6">
                 <div class="service-box-wrap">
                     <div class="service-box-title">
-                        <h2 class="text-center ">Systém firemního reportování</h2>
+                        <h3 class="text-center ">Systém firemního reportování</h3>
                     </div>
                     <div class="service-block-text">Stavíme datové sklady a integrujeme komplexní BI-analytická řešení pro velké společnosti.</div>
                     <div class="service-block-bottom pt-5">
@@ -129,7 +129,7 @@
             <div class="col-md-6">
                 <div class="service-box-wrap">
                     <div class="service-box-title">
-                        <h2 class="text-center ">Netradiční vizualizace dat</h2>
+                        <h3 class="text-center ">Netradiční vizualizace dat</h3>
                     </div>
                     <div class="service-block-text">Vyvíjíme unikátní produkty přizpůsobené vašemu systému a adaptované pro vaše nosiče, specializované na složité KPI.</div>
                     <div class="service-block-bottom pt-5">
@@ -145,7 +145,7 @@
             <div class="col-md-6">
                 <div class="service-box-wrap">
                     <div class="service-box-title">
-                        <h2 class="text-center ">Osobní konzultace</h2>
+                        <h3 class="text-center ">Osobní konzultace</h3>
                     </div>
                     <div class="service-block-text">Pro akcionáře, manažery a analytiky. Řešíme konkrétní obchodní úkoly v rámci hodinových konzultací.</div>
                     <div class="service-block-bottom pt-5">
@@ -161,7 +161,7 @@
             <div class="col-md-6">
                 <div class="service-box-wrap">
                     <div class="service-box-title">
-                        <h2 class="text-center ">První manažerský dashboard</h2>
+                        <h3 class="text-center ">První manažerský dashboard</h3>
                     </div>
                     <div class="service-block-text">Rychlý start pro malé a střední podniky. Nastavíme systém manažerské kontroly během měsíce</div>
                     <div class="service-block-bottom pt-5">
@@ -178,29 +178,24 @@
     </div>
 </div>
 <div class="container py-5">
-    <h2 class="text-center">Individuální přístup k cenotvorbe každého projektu</h2>
-    <div class="row align-items-center pt-3">
-        <div class="col-md-3">
-            <img src="{{ asset('services/service8.png') }}" alt="" class="image">
-        </div>
-        <div class="col-md-9">
-            <h2>
-                Neexistuje univerzální ceník, cena každého dashboardu se posuzuje zvlášť.
-            </h2>
-        </div>
+    <h3 class="text-center">Individuální přístup k cenotvorbe každého projektu</h3>
+    <div class="row justify-content-center">
+        <img src="{{ asset('services/service8.png') }}" alt="" class="image-service-8">
     </div>
-    <h2>
+    <div class="row align-items-center pb-3">
+        <h5 class="text-center">
+            Neexistuje univerzální ceník, cena každého dashboardu se posuzuje zvlášť.
+        </h5>
+    </div>
+    <h3 class="text-center pb-3">
         Klíčové faktory:
-    </h2>
+    </h3>
     <ul class="service-factors-list">
         <li>
             <strong>Kvalita dat:</strong> Vaše data přímo ovlivňují složitost práce.
         </li>
         <li>
             <strong>Počet databází:</strong> Čím více jich je, tím složitější je integrace.
-        </li>
-        <li>
-            <strong>Kvalita dat:</strong> Určuje hloubku analýzy a design dashboardu.
         </li>
     </ul>
 </div>

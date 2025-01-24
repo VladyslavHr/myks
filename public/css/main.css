@@ -313,6 +313,10 @@ select:focus {
     width: 50%;
 }
 
+.image-service-8{
+    width: 20%;
+}
+
 .img-servic-wrap{
     text-align: center;
     /* min-height: 210px; */
@@ -355,7 +359,9 @@ select:focus {
 }
 
 .service-factors-list{
-    padding: 20px;
+    padding: 0px;
+    text-align: center;
+    list-style: none;
 }
 
 .service-factors-list li{
@@ -474,9 +480,15 @@ select:focus {
 }
 
 .service-block-wrap{
-    border: 1px solid;
+    border: 2px solid;
+    border-color: #2b3595;
+    border-radius: 2px;
     padding: 20px;
     min-height: 220px;
+}
+
+.service-img-text{
+    color: #2b3595;
 }
 
 @media (max-width: 1399px){
